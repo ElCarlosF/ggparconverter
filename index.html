@@ -3,7 +3,33 @@
         <title>GG <-> PAR converter</title>
     </head>
     <body style="text-align: center;">
-        <h1>Página en Construcción</h1>
-        <img src="images/c.gif">
+        <p>Seleccione consola</p>
+        <select id="console">
+            <option value="SN">Seleccione una opción...</option>
+            <option value="gameboy">GameBoy / Sega Game Gear / Sega Master System</option>
+            <option value="genesis">Sega Genesis / Mega Drive</option>
+            <option value="nes">NES</option>
+            <option value="snes">SNES</option>
+        </select>
+        <p>Seleccione tipo de código a ingresar</p>
+        <form>
+            <input type="radio" name="typecode" id="PAR" value="Pro Action Replay">
+            <label for="PAR">Pro Action Replay</label>
+            <input type="radio" name="typecode" id="GG" value="Game Genie">
+            <label for="GG">Game Genie</label>
+        </form>
+        <p></p>
+        <div id="code">
+            Ingrese el código a convertir
+            <input type="text" id="text1">
+            <button onclick="checkOption()" id="b1">Convertir</button>
+        </div>
+        <p id="conv"></p>
     </body>
 </html>
+
+<script src="js/uggconv/gameboy.js"></script>
+<script src="js/uggconv/md.js"></script>
+<script src="js/uggconv/nes.js"></script>
+<script src="js/uggconv/snes.js"></script>
+<script src="js/uggconv/util.js"></script>
