@@ -1,6 +1,4 @@
 
-mensaje = "No es un formato válido!";
-
 function orHex8bit(x, y) {
     return (x << 4) | y;
 }
@@ -26,7 +24,6 @@ function decodeGameBoy(_in) {
         document.getElementById("conv").innerText = mensaje;
         return false;
     }
-
     for (i = 0 ; i < _in.length ; i++) {
         digit = parseInt(_in[i], 16);
         if(_in[i] != '-' && isNaN(digit)) {

@@ -1,7 +1,13 @@
+const mensaje = "No es un formato válido!";
+
 function formatHex(hex, lenCorrect){
-    if(hex.length < lenCorrect)
+    let i;
+    let len;
+
+    len = hex.length
+    if(len < lenCorrect)
     {
-        for(i = 0 ; i < (lenCorrect - hex.length) ; i++)
+        for(i = 0 ; i < (lenCorrect - len) ; i++)
         {
             hex = '0' + hex;
         }
