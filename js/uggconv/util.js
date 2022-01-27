@@ -1,5 +1,13 @@
 const mensaje = "No es un formato válido!";
 
+function indexChar(_char, c) {
+    let i;
+    for(i = 0 ; i < _char.length ; i++) {
+        if(c == _char[i]) return i;
+    }
+    return -1;
+}
+
 function formatHex(hex, lenCorrect){
     let i;
     let len;

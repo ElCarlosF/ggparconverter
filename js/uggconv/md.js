@@ -1,13 +1,5 @@
 const genesisChar = "ABCDEFGHJKLMNPRSTVWXYZ0123456789";
 
-function indexGenesisChar(c) {
-    let i;
-    for(i = 0 ; i < genesisChar.length ; i++) {
-        if(c == genesisChar[i]) return i;
-    }
-    return -1;
-}
-
 function decodeMD(_in) {
     //document.getElementById("conv").innerHTML = "Programando...<br><img src='./images/cats-keyboard.gif' height='100' width='100'></img>";
     let address;
@@ -21,17 +13,17 @@ function decodeMD(_in) {
         return false;
     }
     for(i = 0 ; i < 9 ; i++) {
-        if(_in[i] != '-' && indexGenesisChar(_in[i]) == -1) {
+        if(_in[i] != '-' && indexChar(genesisChar, _in[i]) == -1) {
             document.getElementById("conv").innerText = mensaje;
             return false;
         }
     }
     data = new Array(8);
     for(i = 0 ; i < 4 ; i++) {
-        data[i] = indexGenesisChar(_in[i]);
+        data[i] = indexChar(genesisChar, _in[i]);
     }
     for(i = 5 ; i < 9 ; i++) {
-        data[i - 1] = indexGenesisChar(_in[i]);
+        data[i - 1] = indexChar(genesisChar, _in[i]);
     }
     address = 0;
     address |= (data[3] & 0x0f) << 20;
