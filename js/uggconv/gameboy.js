@@ -1,8 +1,3 @@
-
-function orHex8bit(x, y) {
-    return (x << 4) | y;
-}
-
 function decodeGameBoy(_in) {
     let address;
     let value;

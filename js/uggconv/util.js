@@ -1,5 +1,14 @@
 const mensaje = "No es un formato válido!";
 
+function easterEgg(){
+    document.getElementById("copyright").innerHTML = "<img src='./images/cats-keyboard.gif' height='100' width='100'></img>";
+}
+
+
+function orHex8bit(x, y) {
+    return (x << 4) | y;
+}
+
 function indexChar(_char, c) {
     let i;
     for(i = 0 ; i < _char.length ; i++) {
